@@ -10,7 +10,7 @@ client.on('ready', async () => {
     .setName('Minecraft')
     .setDetails('Playing Bedrock Edition')
     .setState('Survival Mode (Multiplayer)')
-    .setAssetsLargeImage(process.env.LARGE_IMAGE_KEY || 'Minecraft')
+    .setAssetsLargeImage(process.env.LARGE_IMAGE_KEY || '⁠img_0604')
     .setAssetsLargeText('Minecraft Bedrock')
     .setStartTimestamp(Date.now());
 
