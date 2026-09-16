@@ -1,6 +1,6 @@
 FROM node:18
-WORKDIR /usr/src/app
-RUN npm install discord.js-selfbot-v13
+WORKDIR /app
+COPY package*.json ./
+RUN npm install
 COPY . .
 CMD ["node", "index.js"]
-
