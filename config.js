@@ -10,28 +10,3 @@ module.exports = {
         "state": "Survival Mode - Multiplayer",
         "startTimestamp": Date.now(),
         "endTimestamp": ""
-    },
-    "twitch": {
-        "applicationID": "",
-        "url": "",
-        "details": "",
-        "state": "",
-        "largeImageKey": "",
-        "largeImageText": "",
-        "smallImageKey": "",
-        "smallImageText": "",
-        "startTimestamp": "",
-        "endTimestamp": ""
-    },
-    "spotify": {
-        "name": "",
-        "details": "",
-        "state": "",
-        "largeImageKey": "",
-        "largeImageText": "",
-        "smallImageKey": "",
-        "smallImageText": "",
-        "startTimestamp": "",
-        "endTimestamp": ""
-    }
-}
