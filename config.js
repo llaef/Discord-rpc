@@ -6,6 +6,5 @@ module.exports = {
     "game": {
         "applicationID": process.env.APPLICATION_ID,
         "name": "League of Legends",
-        "details": "In Game",
     }
 };
