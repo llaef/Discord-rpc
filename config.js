@@ -6,11 +6,6 @@ module.exports = {
     "game": {
         "applicationID": process.env.APPLICATION_ID,
         "name": "League of Legends",
-        "details": "ARAM: Mayhem",
-        "state": "",
-        "party": {
-            "id": "lol_party_xyz",
-            "size": [1, 5]
-        }
+        "details": "In Game",
     }
 };
