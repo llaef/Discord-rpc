@@ -7,6 +7,6 @@ module.exports = {
         "applicationID": process.env.APPLICATION_ID,
         "name": "League of Legends",
         "details": "ARAM:mayhem",
-        "state": "1 of 5"
+        "state": "👥1 of 5"
     }
 };
