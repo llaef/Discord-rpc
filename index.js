@@ -1,3 +1,15 @@
+const express = require('express');
+const app = express();
+const port = process.env.PORT || 3000;
+
+app.get('/', (req, res) => {
+  res.send('Bot is alive and running!');
+});
+
+app.listen(port, () => {
+  console.log(`Web server is listening on port ${port}`);
+});
+
 const { Client, RichPresence } = require("discord.js-selfbot-v13");
 const config = require("./config.js");
 const client = new Client({
@@ -8,6 +20,7 @@ const client = new Client({
     }
 });
 const startTime = Date.now();
+
 client.on("ready", async () => {
     console.log(`Logged in successfully as ${client.user.tag}!`);
     const updateActivity = async () => {
@@ -31,4 +44,5 @@ client.on("ready", async () => {
     setInterval(updateActivity, 15000);
     console.log("Rich Presence is active with stable timer!");
 });
+
 client.login(config.token);
