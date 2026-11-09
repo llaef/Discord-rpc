@@ -1,17 +1,6 @@
-const express = require('express');
-const app = express();
-const port = process.env.PORT || 3000;
-
-app.get('/', (req, res) => {
-  res.send('Bot is alive and running!');
-});
-
-app.listen(port, () => {
-  console.log(`Web server is listening on port ${port}`);
-});
-
 const { Client, RichPresence } = require("discord.js-selfbot-v13");
 const config = require("./config.js");
+
 const client = new Client({
     checkUpdate: false,
     presence: {
@@ -23,25 +12,30 @@ const startTime = Date.now();
 
 client.on("ready", async () => {
     console.log(`Logged in successfully as ${client.user.tag}!`);
+
     const updateActivity = async () => {
         try {
             if (config.mode === "game" && config.game) {
                 const gameConfig = config.game;
+                
                 const rpc = new RichPresence(client)
                     .setApplicationId(gameConfig.applicationID)
                     .setType("PLAYING")
                     .setName(gameConfig.name)
                     .setDetails(gameConfig.details)
-                    .setState(gameConfig.state);
+                    .setState(gameConfig.state); 
                 rpc.setStartTimestamp(startTime);
+
                 await client.user.setActivity(rpc);
             }
         } catch (e) {
             console.error("Error updating presence:", e);
         }
     };
+
     await updateActivity();
     setInterval(updateActivity, 15000);
+
     console.log("Rich Presence is active with stable timer!");
 });
 
